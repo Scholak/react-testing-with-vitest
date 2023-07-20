@@ -4,13 +4,10 @@ import { Button, LoginForm, ReduxCounter } from './components'
 import Counter from './components/Counter/Counter'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import FetchTodos from './components/FetchTodos/FetchTodos'
-import { server } from './mock/server'
 
 export const client = new QueryClient()
 
 const App = () => {
-	server.listen()
-
   return (
 		<Provider store={store}>
 			<QueryClientProvider client={client}>
